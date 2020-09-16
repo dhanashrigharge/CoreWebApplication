@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -6,8 +6,9 @@ using CoreWebApplication.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 
-namespace CoreWebApplication.Pages.UserList
+namespace CoreWebApplication.Pages
 {
     public class IndexModel : PageModel
     {
@@ -18,6 +19,7 @@ namespace CoreWebApplication.Pages.UserList
         }
 
         public IEnumerable<User> Users { get; set; }
+        
 
         public async Task OnGet()
         {

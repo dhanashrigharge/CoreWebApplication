@@ -16,7 +16,8 @@ namespace CoreWebApplication.Models
         public String Name { get; set; }
 
         [Required]
-        [StringLength(15)]
+        [DataType(DataType.PhoneNumber)]
+        [RegularExpression(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$", ErrorMessage = "Not a valid phone number")]
         public string Phone { get; set; }
     }
 }
